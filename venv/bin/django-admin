@@ -1,4 +1,4 @@
-#!/Users/yukinagase/Desktop/myProject/venv/bin/python3
+#!/Users/yukinagase/Desktop/machimemo/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
