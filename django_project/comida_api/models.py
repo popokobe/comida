@@ -1,4 +1,4 @@
-from django.db import models
+from django.db import models 
 from django.core.validators import MaxValueValidator, MinValueValidator
 
 class User(models.Model):
@@ -12,6 +12,10 @@ class User(models.Model):
 class Friend(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name='owner')
     friend = models.ForeignKey(User, on_delete=models.CASCADE, related_name='friend')
+
+    def __str__(self):
+        return self.friend
+
 
 class Post(models.Model):
     CATEGORY_CHOICES = [
