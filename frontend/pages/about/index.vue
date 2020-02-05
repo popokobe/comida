@@ -2,7 +2,6 @@
   <v-layout>
     <h1>This is About Page</h1>
     <v-spacer></v-spacer>
-    <v-btn>afaffa</v-btn>
     <div v-for="post in posts" :key="post.id">
       <p>{{ post.name }}</p>
       <p>{{ post.dish }}</p>
@@ -20,7 +19,7 @@ export default {
     }
   },
   async mounted() {
-    const url = '/posts'
+    const url = 'posts'
     const response = await this.$axios.get(url)
     this.posts = response.data
   }
